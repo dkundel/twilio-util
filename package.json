@@ -1,0 +1,59 @@
+{
+  "name": "twilio-util",
+  "version": "1.0.0",
+  "description": "A collection of utility functions to work with the different Twilio libraries ",
+  "main": "dist/twilio-util.js",
+  "source": "lib/index.js",
+  "module": "dist/twilio-util.es.js",
+  "umd:main": "dist/twilio-util.umd.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "bundle": "microbundle build",
+    "prebuild": "npm run tsc",
+    "build": "npm run bundle",
+    "watch": "tsc-watch --onSuccess 'npm run bundle'",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkundel/twilio-util.git"
+  },
+  "keywords": [
+    "twilio",
+    "utils",
+    "helper",
+    "twiml"
+  ],
+  "author": "Dominik Kundel <dkundel@twilio.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dkundel/twilio-util/issues"
+  },
+  "homepage": "https://github.com/dkundel/twilio-util#readme",
+  "devDependencies": {
+    "@types/jest": "^22.0.1",
+    "jest": "^22.0.4",
+    "microbundle": "^0.2.4",
+    "semantic-release": "^11.0.2",
+    "ts-jest": "^22.0.1",
+    "tsc-watch": "^1.0.13",
+    "typescript": "^2.6.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "json",
+      "js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
+    ]
+  }
+}
