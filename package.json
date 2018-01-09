@@ -1,7 +1,8 @@
 {
   "name": "twilio-util",
-  "version": "1.0.0",
-  "description": "A collection of utility functions to work with the different Twilio libraries ",
+  "version": "1.0.0--alpha",
+  "description":
+    "A collection of utility functions to work with the different Twilio libraries ",
   "main": "dist/twilio-util.js",
   "source": "lib/index.js",
   "module": "dist/twilio-util.es.js",
@@ -19,12 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/dkundel/twilio-util.git"
   },
-  "keywords": [
-    "twilio",
-    "utils",
-    "helper",
-    "twiml"
-  ],
+  "keywords": ["twilio", "utils", "helper", "twiml"],
   "author": "Dominik Kundel <dkundel@twilio.com>",
   "license": "MIT",
   "bugs": {
@@ -38,22 +34,23 @@
     "semantic-release": "^11.0.2",
     "ts-jest": "^22.0.1",
     "tsc-watch": "^1.0.13",
+    "twilio": "^3.11.0",
+    "twilio-chat": "^2.0.1",
+    "twilio-sync": "^0.7.2",
     "typescript": "^2.6.2"
+  },
+  "peerDependencies": {
+    "twilio": "^3.11.0",
+    "twilio-chat": "^2.0.1",
+    "twilio-sync": "^0.7.2"
   },
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "json",
-      "js"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/dist/",
-      "<rootDir>/node_modules/"
-    ]
-  }
+    "moduleFileExtensions": ["ts", "tsx", "json", "js"],
+    "testPathIgnorePatterns": ["<rootDir>/dist/", "<rootDir>/node_modules/"]
+  },
+  "dependencies": {}
 }
